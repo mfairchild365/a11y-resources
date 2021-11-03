@@ -4,6 +4,12 @@ This is an opinionated list of good accessibility resources for people that want
 
 Your high-level goal for standards should be to learn what sort of information each standard talks about and how they are structured so that you can use them as a reference when searching for an answer. It's impossible to memorize them all.
 
+
+## What is Digital Accessibility?
+
+* From a minimal compliance perspective: For software to be "accessible" it must be equally usable by someone with a disability as someone without a disability. Minimal compliance is usually measured by WCAG conformance. We should not stop at minimal compliance. 
+* From an [inclusive design](https://inclusivedesignprinciples.org/) perspective: accessibility is about going beyond minimal complance and providing good experiences for everyone. 
+
 ## This is completely new to me
 
 * [What the heck is WCAG?](https://www.w3.org/WAI/standards-guidelines/wcag/)
@@ -44,9 +50,19 @@ Tools
 * [W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) - The WAI should be one of the first places you look for accessibility information. They have top-notch resources on fundamentals, policy, tutorials, testing, etc.
 * [Introduction to Web Accessibility - edX course on accessibility from the W3C WAI](https://www.edx.org/course/web-accessibility-introduction)
 
+## Effective development process
+
+To mitigate finding defects late in the development process and costs related to remediation, accessibility should be shifted as far left in the development process as possible.
+
+* Designs should be reviewed for accessibility before they are implemented.
+* The desired assistive technology experience of the designs should be explicity planned for before development starts. See [Accessibility Informed Development (a11yBID)](https://bit.ly/a11yBID).
+* Code should be tested for accessibility by developers.
+* Code should be tested for accessibility by QA.
+* Mechanisms should be in place to monitor accessibility and detect regressions.
+
 ## Checklists
 
-I need to start this with a disclaimer. Accessibility is not a checklist. Everyone always asks me for a checklist, which is why I'm including this list. Everything that is in WCAG 2.1 should be on the checklist. As much as you or I might want it to be simpler than that, it just isn't. Remember that WCAG is a **minimum** requirement and doesn't cover everything. You should do acceptance testing and research with people with disabilities. That being said, you might find the following helpful.
+I need to start this with a disclaimer. Accessibility is not a checklist. Everyone always asks me for a checklist, which is why I'm including this list. Everything that is in WCAG 2.1 should be on the checklist. As much as you or I might want it to be simpler than that, it just isn't. Remember that WCAG is a **minimum** requirement and doesn't cover everything. You should do acceptance testing and research with people with disabilities. Checklists are most effective when used in planning. That being said, you might find the following helpful.
 
 * [WCAG Quick Ref](https://www.w3.org/WAI/WCAG21/quickref/) - as discussed earlier.
 * [WAI: Easy Checks - A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/) - a great first check for accessibility.
