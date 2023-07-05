@@ -14,7 +14,8 @@ Testing difficulty: 1/5.
 
 Katie has limited control over her hands due to a car accident. Because of this, she uses assistive technologies that behave like keyboards to interact with her computer.
 
-Why it matters: We need to ensure that sighted users with motor disabilities can use just a keyboard (no mouse) to complete their tasks. This will allow the user to use many assistive technologies to interact with the page.
+- Why it matters: We need to ensure that sighted users with motor disabilities can use just a keyboard (no mouse) to complete their tasks. This will allow the user to use many assistive technologies to interact with the page.
+- Assistive technologies: keyboard, devices that emulate keyboard commands, switch access, voice control, eye tracking, etc.
 
 How to test:
 
@@ -31,12 +32,15 @@ Testing difficulty: 2/5.
 
 Stacie was born with color blindness and has lost a significant amount of vision over the years due to diabetes, but does not identify as blind.
 
-Why it matters: We need to make sure that content is easy to read for users with low vision.
+- Why it matters: We need to make sure that content is easy to read for users with low vision.
+- Assistive technologies: browser zoom, screen magnifiers, text-to-speech, high contrast color modes, etc.
 
 How to test:
 
 1. Use the [axe DevTools extension](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) to automatically check the color contrast of text. However, this tool will not automatically catch everything and will not check the contrast of graphical objects. It does help to speed things up!
-   - Ensure that the color contrast of graphical objects is sufficient. Use the Deque Color Contrast Checker to manually test and read more about the requirements. 
+   - Ensure that the color contrast of graphical objects is sufficient. Use the Deque Color Contrast Checker to manually test and read more about the requirements.
+2. Increase the browser's zoom to 200%.
+   - Ensure that all content is still available. It's okay if it is now hidden, as long as there is a mechanism to reveal it (for example, a navigation region that turns into a hamburger menu when you zoom).
 2. Look for any information that is conveyed by color alone. Ensure that there is supporting text and shapes, or that the information is conveyed in some other way than just color. 
    - Examples might include: 
       - Red text to indicate that a form control has an error.
@@ -48,7 +52,8 @@ Testing difficulty 2/5.
 
 Richard was born with ADHD and has short-term memory loss. Because of this, he tends to forget quickly and get distracted easily.
 
-Why it matters: Cognitive disabilities are the most common form of disability, and often go undiagnosed. It's also the most diverse group of disability and can manifest in many different ways. We need to account for this diversity in our content.
+- Why it matters: Cognitive disabilities are the most common form of disability, and often go undiagnosed. It's also the most diverse group of disability and can manifest in many different ways. We need to account for this diversity in our content.
+- Assistive technologies: text-to-speech, digital dictionaries, software to limit distractions, etc.
 
 How to test:
 
@@ -78,14 +83,23 @@ Abe has photo-epileptic seizures. If the media has too many flashes of light, it
 
 Why it matters: Flashes of light can trigger seizures and hurt users. Avoid them at all costs.
 
-1. Ensure that there is not a series of 3 flashes of light per second or more in any content or media. 
+1. Ensure that there is not a series of 3 flashes of light per second or more in any content or media.
+
+## Persona 6: Karl - motion sickness
+Testing difficulty: 2/5.
+Karl has a vestibular disability. He gets very dizzy and even nauseous if there is too much motion on the screen.
+
+Why it matters: too much motion can cause serious problems for some users.
+
+1. Ensure that all auto-playing animations and videos either automatically stop within 5 seconds or that there is a mechanism to pause them.
+   - Better yet, use something like a CSS `prefers-reduced-motion` to turn off motion automatically for users that set the preference. [Read more about prefers-reduced motion on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion).
 
 ## Persona 6: Justin - blind screen reader user
 Testing difficulty: 5/5.
 
 Justin is legally blind and uses a screen reader to interact with his phone and computer. Even though Justin is legally blind, he still has a small amount of vision - but can only make out general shapes.
 
-Why it matters: Screen reader software will announce more than just the text that is on the page. It will also announce what each element is (a button, link, list, table, etc.), and any relationships and structure (heading level, table cell headers, etc.). Screen readers will also announce states and properties of elements (expanded/collapsed, active, selected, etc.). A blind user needs to hear all the information that a sighted user can glean from visual hints/cues and affordances.
+Why it matters: Screen reader software will announce more than just the text that is on the page. It will also announce what each element is (a button, link, list, table, etc.), and any relationships and structure (heading level, table cell headers, etc.). Screen readers will also announce the states and properties of elements (expanded/collapsed, active, selected, etc.). A blind user needs to hear all the information that a sighted user can glean from visual hints/cues and affordances.
 
 How to test:
 
