@@ -94,7 +94,7 @@ Why it matters: too much motion can cause serious problems for some users.
 1. Ensure that all auto-playing animations and videos either automatically stop within 5 seconds or that there is a mechanism to pause them.
    - Better yet, use something like a CSS `prefers-reduced-motion` to turn off motion automatically for users that set the preference. [Read more about prefers-reduced motion on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion).
 
-## Persona 6: Justin - blind screen reader user
+## Persona 7: Justin - blind screen reader user
 Testing difficulty: 5/5.
 
 Justin is legally blind and uses a screen reader to interact with his phone and computer. Even though Justin is legally blind, he still has a small amount of vision - but can only make out general shapes.
