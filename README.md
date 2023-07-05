@@ -1,4 +1,4 @@
-# A curated list of digital accessibility resources
+# Introduction to digital accessibility
 
 This is an opinionated introduction to accessibility. My goal is to keep this short, so I had to make hard decisions about what to include and what to leave out. There are a lot of great resources that I'm not listing here.
 
@@ -9,7 +9,9 @@ This is an opinionated introduction to accessibility. My goal is to keep this sh
 
 Also, please be respectful as you advocate for accessibility to others, and remember that you didn't learn everything you know about accessibility overnight.
 
-## What is Digital Accessibility?
+## What is digital accessibility and who is it for?
+
+Digital accessibility is about making the software we build accessible to people with disabilities. There are many disabilities, read the [accessibility personas](personas.md) to start learning about them.
 
 * From a minimal compliance perspective: For software to be "accessible" it must be equally usable by someone with a disability as someone without a disability. Minimal compliance is usually measured by WCAG conformance. Thus, if an experience is equally unusable by everyone, it is still "accessible." We should not stop at minimal compliance. 
 * From an [inclusive design](https://inclusivedesignprinciples.org/) perspective: accessibility is about going beyond minimal compliance and providing good experiences for everyone. This is what we should strive for.
@@ -18,7 +20,53 @@ I am making this differentiation because many folks think that WCAG conformance 
 
 ## What should I do if this is completely new to me?
 
-If this is completely new to you, first read the [accessibility personas](personas.md). This will help you understand what accessibility is, who it is for, and how to test for it.
+If this is completely new to you, first read the [accessibility personas](personas.md). This will help you understand what accessibility is, who it is for, and how to test for it. Then, take a few moments to create a very small goal. Perhaps that goal is to test the next thing you build using a keyboard, or with the [axe browser extension](https://www.deque.com/axe/browser-extensions/). Then iterate - keep setting new goals, and hold yourself accountable.
+
+## When should I think about digital accessibility in the software development life cycle?
+
+An oversimplification of the software development lifecycle (SDLC) boils down to:
+
+1. Design and planning.
+2. Development.
+3. Testing.
+4. Release.
+5. Repeat to make enhancements or fix bugs.
+
+Additionally, mechanisms should be in place to monitor accessibility and detect regressions, both automatically and manually.
+ 
+* Example: recurring manual audits and automated checks built into the CI/CD pipeline.
+* Hint: integrating a tool into your automated testing pipeline is key. A quick win here will be linters like [axe Linter](https://github.com/marketplace/axe-linter).
+
+Digital accessibility will be most successful if it is considered at each stage of the SDLC. [The cost of fixing bugs grows significantly the later it is found in the SDLC](https://www.researchgate.net/figure/IBM-System-Science-Institute-Relative-Cost-of-Fixing-Defects_fig1_255965523). Thus, we need to consider accessibility as early as possible, especially in design and planning.
+
+## Where are accessibility bugs found?
+
+Accessibility bugs can be found in:
+
+1. Design. Examples: color contrast, use of color alone to convey information, etc.
+2. Written content. Examples: alternative text for images, helpful error messages, etc.
+3. Code. Examples: programmatically conveying the name, role, value, structure, and relationships of elements on the page.
+
+## Who needs to think about digital accessibility?
+
+The short answer is everyone. Here are some examples:
+
+- Product owners, stakeholders, and leadership should make accessibility a clear priority and look for evidence that what is being built is accessible.
+- Designers need to test their designs for accessibility before handing them off for development. They can also document the expected user experiences of those designs for people with disabilities (this is often done with accessibility annotations).
+- Content writers need to author good alternative text for images, write helpful error messages, etc.
+- Whoever is writing development stories or tickets should make it clear what the requirements are for accessibility in the story itself. Accessibility acceptance criteria are very helpful here. For more information, read [Collaborative planning, the forgotten step of accessible development](https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/).
+- Developers need to ensure that the code they write is accessible and meets expectations.
+- Testers need to verify that accessibility requirements have been met - this includes design, content, and dev requirements.
+
+None of these roles individually need to be an accessibility expert. That would be unreasonable and inefficient. Instead, this should be a collaborative effort, with an atmosphere of experimentation and learning across roles. Collectively, the team should be able to work through most accessibility problems, but may still need to reach out to an expert from time to time.
+
+## Why should I care about digital accessibility?
+
+There are several reasons:
+
+- For the people behind the screen. Humans are diverse, and we should account for that in our software.
+- For business potential. For example, it can be a significant way to differentiate your product from the competition and tap into the [disposable income that people with disabilities hold](https://www.air.org/resource/report/hidden-market-purchasing-power-working-age-adults-disabilities).
+- For legal. Accessibility is a civil right. 
 
 ## What tools should I use?
 
@@ -57,17 +105,6 @@ Additionally, check out these resources:
 * [Accessibility is a civil right](https://www.deque.com/blog/javascript-and-civil-rights/)
 * [Evaluating Web Accessibility](https://www.w3.org/WAI/test-evaluate/)
 * [I prefer to watch videos (A11ycasts with Rob Dodson)](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
-
-## What is an effective development process?
-
-Finding and fixing accessibility issues late in development is not cost-efficient. Instead, accessibility should be shifted as far left in the development process as possible, as close to design and planning as possible. But please keep in mind that accessibility still needs to be considered at every phase of the software development life-cycle.
-
-* Designs should be reviewed for accessibility before they are implemented.
-  * The desired assistive technology experience of the designs should be explicitly planned for before development starts. This should be a collaborative exercise between designers and developers. See [Accessibility Informed Development (a11yBID)](https://bit.ly/a11yBID).
-* Code should be tested for accessibility by both developers (as they are developing) and testers.
-* Mechanisms should be in place to monitor accessibility and detect regressions, both automatically and manually.
-  * Example: recurring manual audits and automated checks built into the CI/CD pipeline.
-  * Hint: integrating a tool into your automated testing pipeline is key. A quick win here will be linters like [axe Linter](https://github.com/marketplace/axe-linter).
 
 ## What are some good checklists?
 
