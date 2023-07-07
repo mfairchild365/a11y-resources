@@ -12,7 +12,7 @@ Think about disabilities and accessibility this way: People are disabled by the 
 ## Persona 1: Katie - Sighted keyboard-only user
 Testing difficulty: 1/5.
 
-Katie has limited control over her hands due to a car accident. Because of this, she uses assistive technologies that behave like keyboards to interact with her computer.
+Katie has permanently lost fine motor control in her hands due to a car accident. Because of this, she uses assistive technologies that behave like keyboards to interact with her computer.
 
 - Why it matters: We need to ensure that sighted users with motor disabilities can use just a keyboard (no mouse) to complete their tasks. This will allow the user to use many assistive technologies to interact with the page.
 - Assistive technologies: keyboard, devices that emulate keyboard commands, switch access, voice control, eye tracking, etc.
@@ -79,6 +79,7 @@ Why it matters: Deaf users will not be able to hear any audio, such as audio fou
 
 ## Persona 5: Abe - seizures
 Testing difficulty: 2/5.
+
 Abe has photo-epileptic seizures. If the media has too many flashes of light, it can trigger a serious seizure for him and land him in the hospital.
 
 Why it matters: Flashes of light can trigger seizures and hurt users. Avoid them at all costs.
@@ -87,9 +88,10 @@ Why it matters: Flashes of light can trigger seizures and hurt users. Avoid them
 
 ## Persona 6: Karl - motion sickness
 Testing difficulty: 2/5.
+
 Karl has a vestibular disability. He gets very dizzy and even nauseous if there is too much motion on the screen.
 
-Why it matters: too much motion can cause serious problems for some users.
+Why it matters: too much motion can cause serious health issues for some users that can last hours if not days.
 
 1. Ensure that all auto-playing animations and videos either automatically stop within 5 seconds or that there is a mechanism to pause them.
    - Better yet, use something like a CSS `prefers-reduced-motion` to turn off motion automatically for users that set the preference. [Read more about prefers-reduced motion on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion).
@@ -97,7 +99,7 @@ Why it matters: too much motion can cause serious problems for some users.
 ## Persona 7: Justin - blind screen reader user
 Testing difficulty: 5/5.
 
-Justin is legally blind and uses a screen reader to interact with his phone and computer. Even though Justin is legally blind, he still has a small amount of vision - but can only make out general shapes.
+Justin is legally blind and uses a screen reader to interact with his phone and computer. Even though Justin is legally blind, he still has a small amount of vision - but can only make out general shapes most of the time.
 
 Why it matters: Screen reader software will announce more than just the text that is on the page. It will also announce what each element is (a button, link, list, table, etc.), and any relationships and structure (heading level, table cell headers, etc.). Screen readers will also announce the states and properties of elements (expanded/collapsed, active, selected, etc.). A blind user needs to hear all the information that a sighted user can glean from visual hints/cues and affordances.
 
